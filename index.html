@@ -5,15 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DondeLukas AI Funnel</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+<body class="bg-gray-100 min-h-screen font-sans flex items-center justify-center">
   <main id="funnel" class="w-full max-w-md mx-auto p-4">
     <!-- Step 1: Welcome -->
     <section id="step1" class="step">
-      <h1 class="text-2xl font-bold mb-4 text-center">Welcome to DondeLukas</h1>
-      <p class="mb-6 text-center">Discover how an AI-powered funnel can help your business.</p>
-      <button id="startBtn" class="w-full py-2 px-4 bg-blue-600 text-white rounded">Get Started</button>
+      <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-center py-2 text-sm rounded-t-lg">
+        🔥 AI Funnels Live – Test Yours Now
+      </div>
+      <h1 class="text-3xl font-extrabold mt-6 mb-4 text-center">Mobile-First AI Sales Funnel</h1>
+      <p class="mb-6 text-center text-gray-700">Interact with our assistant and see how AI can help your business grow.</p>
+      <button id="startBtn" class="w-full py-3 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Get Started</button>
     </section>
 
     <!-- Step 2: User Input -->
@@ -25,17 +31,22 @@
 
     <!-- Step 3: AI Response -->
     <section id="step3" class="step hidden">
-      <div id="aiResponse" class="mb-6"></div>
-      <button id="nextBtn" class="w-full py-2 px-4 bg-blue-600 text-white rounded">Next</button>
+      <div id="aiResponse" class="mb-6 bg-blue-50 rounded p-4 text-gray-800 shadow"></div>
+      <button id="nextBtn" class="w-full py-2 px-4 bg-blue-600 text-white rounded hidden">Next</button>
     </section>
 
     <!-- Step 4: Offer -->
     <section id="step4" class="step hidden">
-      <h2 class="text-xl font-bold mb-4 text-center">Want this funnel for your business?</h2>
-      <p class="mb-6 text-center">We build mobile-first AI funnels that convert. Let's talk about how it can work for you.</p>
-      <a href="#" class="block w-full text-center py-2 px-4 bg-green-600 text-white rounded">Contact Us</a>
+      <div class="pricing-card bg-white rounded-lg shadow p-6 transition transform hover:scale-105">
+        <h2 class="text-xl font-bold mb-2 text-center">Get Your Own AI Funnel</h2>
+        <p class="text-center mb-4 text-gray-600">Starting at just $199</p>
+        <a href="mailto:info@dondelukas.com" class="block w-full text-center py-2 px-4 bg-green-600 text-white rounded">Contact Us</a>
+      </div>
     </section>
   </main>
+
+  <button id="floatAssistant" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg">AI</button>
+  <div id="conversionPopup" class="fixed bottom-4 left-4 bg-white shadow rounded px-3 py-2 text-sm hidden">John from NYC just got a tip!</div>
 
   <script src="/scripts/assistant.js"></script>
 </body>
