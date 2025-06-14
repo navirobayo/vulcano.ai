@@ -25,10 +25,17 @@ const submitBtn = document.getElementById('submitBtn');
 const nextBtn = document.getElementById('nextBtn');
 const userInput = document.getElementById('userInput');
 const aiResponse = document.getElementById('aiResponse');
+const floatBtn = document.getElementById('floatAssistant');
+const popup = document.getElementById('conversionPopup');
 
 function showStep(id) {
-  document.querySelectorAll('.step').forEach(el => el.classList.add('hidden'));
-  document.getElementById(id).classList.remove('hidden');
+  document.querySelectorAll('.step').forEach(el => {
+    el.classList.add('hidden');
+    el.classList.remove('active');
+  });
+  const step = document.getElementById(id);
+  step.classList.remove('hidden');
+  setTimeout(() => step.classList.add('active'), 10);
 }
 
 startBtn.addEventListener('click', () => {
@@ -39,10 +46,24 @@ submitBtn.addEventListener('click', () => {
   const input = userInput.value.trim();
   if (!input) return;
   const response = Assistant.generateResponse(input);
-  aiResponse.textContent = response;
+  aiResponse.textContent = '';
   showStep('step3');
+  nextBtn.classList.add('hidden');
+  setTimeout(() => {
+    aiResponse.textContent = response;
+    nextBtn.classList.remove('hidden');
+  }, 600);
 });
 
 nextBtn.addEventListener('click', () => {
   showStep('step4');
 });
+
+floatBtn.addEventListener('click', () => {
+  showStep('step2');
+});
+
+// Simulate recent conversion popup
+setTimeout(() => {
+  if (popup) popup.classList.add('show');
+}, 2000);
