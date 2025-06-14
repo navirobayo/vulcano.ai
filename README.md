@@ -1,4 +1,4 @@
 # dondelukas.com
-This repository contains the static files for dondelukas.com.
+A simple and actually functional sales funnel for your product. Yes, we use Ai.
 
-A simple thank you page is available at `/graciasportucompra/`.
+Test it yourself at www.dondelukas.com
