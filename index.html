@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DondeLukas AI Funnel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <main id="funnel" class="w-full max-w-md mx-auto p-4">
+    <!-- Step 1: Welcome -->
+    <section id="step1" class="step">
+      <h1 class="text-2xl font-bold mb-4 text-center">Welcome to DondeLukas</h1>
+      <p class="mb-6 text-center">Discover how an AI-powered funnel can help your business.</p>
+      <button id="startBtn" class="w-full py-2 px-4 bg-blue-600 text-white rounded">Get Started</button>
+    </section>
+
+    <!-- Step 2: User Input -->
+    <section id="step2" class="step hidden">
+      <label for="userInput" class="block mb-2 text-sm">What's your biggest marketing challenge?</label>
+      <input id="userInput" type="text" class="w-full p-2 border rounded mb-4" placeholder="e.g. getting leads">
+      <button id="submitBtn" class="w-full py-2 px-4 bg-blue-600 text-white rounded">Show me a tip</button>
+    </section>
+
+    <!-- Step 3: AI Response -->
+    <section id="step3" class="step hidden">
+      <div id="aiResponse" class="mb-6"></div>
+      <button id="nextBtn" class="w-full py-2 px-4 bg-blue-600 text-white rounded">Next</button>
+    </section>
+
+    <!-- Step 4: Offer -->
+    <section id="step4" class="step hidden">
+      <h2 class="text-xl font-bold mb-4 text-center">Want this funnel for your business?</h2>
+      <p class="mb-6 text-center">We build mobile-first AI funnels that convert. Let's talk about how it can work for you.</p>
+      <a href="#" class="block w-full text-center py-2 px-4 bg-green-600 text-white rounded">Contact Us</a>
+    </section>
+  </main>
+
+  <script src="/scripts/assistant.js"></script>
+</body>
+</html>
