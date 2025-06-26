@@ -1,2 +1,2 @@
 # vulcano.ai
-A simple and actually functional sales funnel for your product
+Give to your users a complete AI experience while they purchase from you. 
